@@ -1,0 +1,16 @@
+PROJECT(Demo)
+
+cmake_minimum_required(VERSION 3.13)
+
+set(OPEN_CV_INCLUDE "D:/install_soft/opencv-3.4.5-vc14_vc15/opencv/build/include")
+set(OPEN0_CV_LIB_DIRECTOR "D:/install_soft/opencv-3.4.5-vc14_vc15/opencv/build/x64/vc15/lib")
+set(LIB_NAME "opencv_world345.lib")
+
+include_directories(${OPEN_CV_INCLUDE})
+
+link_directories(${OPEN0_CV_LIB_DIRECTOR})
+
+ADD_EXECUTABLE(main main.cpp)
+
+target_link_libraries(main ${LIB_NAME})
+
